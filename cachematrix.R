@@ -1,5 +1,8 @@
 
-# This function checks whether the inverse is already cached .In order to not do excess computational work .This helps to limit the work by checking if the inverse is already there or not .
+# This function checks whether the inverse is already cached 
+#In order to not do excess computational work .
+#This helps to limit the work by checking if the inverse is already there or not .
+
 makeCacheMatrix <- function(x = matrix()) {
   inv<-NULL
   set<-function(y){
@@ -17,6 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 cacheSolve <- function(x, ...) {
+  
   ##  This function returns the matric that is Inversed. So it returns the inverse of 'x'
   inv<-x$getinverse()
   if(!is.null(inv)){
